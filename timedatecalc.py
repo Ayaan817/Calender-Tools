@@ -1,3 +1,8 @@
+'''
+not working for january right now
+can't handle errors right now
+'''
+
 import math
 
 year = int(input("Enter year: "))

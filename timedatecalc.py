@@ -1,6 +1,5 @@
 '''
-not working for january,february right now
-can't handle errors right now
+not working, no error handling
 '''
 
 import math

@@ -1,5 +1,9 @@
 from math import floor as fl
 
+'''
+Year calculations begin
+'''
+
 year = int(input("Enter YEAR:"))
 
 rem_years = year - 1
@@ -22,6 +26,10 @@ norm_years = rem_years - leap_years
 
 year_oddays += ((2 * leap_years) + norm_years)
 year_oddays %= 7
+
+'''
+Month calculations begin
+'''
 
 if int(str(year)[-1]) == 0 and int(str(year)[-2]) == 0:
     if year % 400 == 0:
@@ -57,9 +65,16 @@ while n != rem_months:
 
 month_oddays %= 7
 
+'''
+Date calculations begin
+'''
 
 date = int(input("Enter DATE:"))
 date_oddays = date % 7
+
+'''
+Output calculations begin
+'''
 
 total_oddays = (year_oddays + month_oddays + date_oddays) % 7
 
@@ -67,11 +82,3 @@ days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Satur
 months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
 
 print(f"{date} {months[month-1]}, {year} is a {days[total_oddays]}.")
-
-
-
-
-
-
-
-    
